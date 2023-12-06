@@ -16,7 +16,7 @@ float calcularPromedioAlumno(float notas[NUM_PROGRESOS]) {//calcumaos el promedi
 float calcularPromedioGrupo(float notas[NUM_ALUMNOS][NUM_PROGRESOS], int progreso) {
     float suma = 0;//la suma sera decimal hasta obtener los datos de cada progreso al inicio
     for (int i = 0; i < NUM_ALUMNOS; i++) {
-        suma += notas[i][progreso];
+        suma += notas[i][progreso];//llamamos a a función para obtener el resultado final
     } // Calcular el promedio dividiendo la suma total por el número de progresos
     return suma / NUM_ALUMNOS;// regreasmos a la divisón de la suma sobre el numero de alumnos 
 }
