@@ -5,7 +5,6 @@
 float calcularPromedioAlumno(float notas[NUM_PROGRESOS]);//delcaramos las funciones decimales que obtendremos de los datos decimales
 float calcularPromedioGrupo(float notas[NUM_ALUMNOS][NUM_PROGRESOS], int progreso);//declaramos el promedio, los datos decimales y el progreso en valor entero
 int encontrarMejorAlumno(float notas[NUM_ALUMNOS][NUM_PROGRESOS]);//encontrar el mejor dato para poder encontrar el promedio final
-
 float calcularPromedioAlumno(float notas[NUM_PROGRESOS]) {//calcumaos el promedio y declaramos en decimal
     float suma = 0;
     for (int i = 0; i < NUM_PROGRESOS; i++) {//verifcamos con el ciclo for con cada dato ingresado
@@ -44,7 +43,7 @@ int main() {
     for (int i = 0; i < NUM_ALUMNOS; i++) {
         printf("Alumno %d:\n", i + 1);//verificamos que sean mayores al numero de alumnos
         for (int j = 0; j < NUM_PROGRESOS; j++) {
-            printf("Progreso %d: ", j + 1);
+            printf("Progreso %d: ", j + 1); // se escribe el progreso pero se suma 1 hasta que lleguemos al tercero de cada alumno
             scanf("%f", &notas[i][j]);// lectura de los datos presentadoss para el promedio final
         }
     }
@@ -52,7 +51,7 @@ int main() {
     printf("\nPromedio del grupo para cada progreso:\n");
     for (int j = 0; j < NUM_PROGRESOS; j++) {
         printf("Progreso %d: %.2f\n", j + 1, calcularPromedioGrupo(notas, j));//las notas seran verificadas si son mayores al numero de progresos
-    }
+    } ///Imprimos en pantalla los datos generales de cada uno de los datos presentes
     // Realizamos el calculo para saber el mejor alumno y su promedio
     int mejorAlumno = encontrarMejorAlumno(notas); //llamamos a la función para obtener los datos finales 
     printf("\nEl alumno con el mejor promedio es el Alumno %d\n", mejorAlumno + 1);
