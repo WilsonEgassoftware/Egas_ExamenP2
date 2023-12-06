@@ -1,8 +1,6 @@
 #include <stdio.h>
-
 #define NUM_ALUMNOS 23//definimos la cantidad de estudiantes de nuestro ejercicio
 #define NUM_PROGRESOS 3//definimos los progresos del ejercicio
-
 // Prototipos de funciones
 float calcularPromedioAlumno(float notas[NUM_PROGRESOS]);//delcaramos las funciones decimales que obtendremos de los datos decimales
 float calcularPromedioGrupo(float notas[NUM_ALUMNOS][NUM_PROGRESOS], int progreso);//declaramos el promedio, los datos decimales y el progreso en valor entero
@@ -17,11 +15,11 @@ float calcularPromedioAlumno(float notas[NUM_PROGRESOS]) {//calcumaos el promedi
 }
 // Inicializar la variable suma para acumular las notas
 float calcularPromedioGrupo(float notas[NUM_ALUMNOS][NUM_PROGRESOS], int progreso) {
-    float suma = 0;
+    float suma = 0;//la suma sera decimal hasta obtener los datos de cada progreso al inicio
     for (int i = 0; i < NUM_ALUMNOS; i++) {
         suma += notas[i][progreso];
     } // Calcular el promedio dividiendo la suma total por el número de progresos
-    return suma / NUM_ALUMNOS;
+    return suma / NUM_ALUMNOS;// regreasmos a la divisón de la suma sobre el numero de alumnos 
 }
   // Iterar a través de los progresos para sumar las notas
 int encontrarMejorAlumno(float notas[NUM_ALUMNOS][NUM_PROGRESOS]) {
