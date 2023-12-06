@@ -6,9 +6,9 @@ float calcularPromedioAlumno(float notas[NUM_PROGRESOS]);//delcaramos las funcio
 float calcularPromedioGrupo(float notas[NUM_ALUMNOS][NUM_PROGRESOS], int progreso);//declaramos el promedio, los datos decimales y el progreso en valor entero
 int encontrarMejorAlumno(float notas[NUM_ALUMNOS][NUM_PROGRESOS]);//encontrar el mejor dato para poder encontrar el promedio final
 float calcularPromedioAlumno(float notas[NUM_PROGRESOS]) {//calcumaos el promedio y declaramos en decimal
-    float suma = 0;
+    float suma = 0;//dato decimal igualado a 0 para obtener despues los datos
     for (int i = 0; i < NUM_PROGRESOS; i++) {//verifcamos con el ciclo for con cada dato ingresado
-        suma += notas[i];
+        suma += notas[i];//llamamos a la función
     }
     return suma / NUM_PROGRESOS;//pedimos el regreso de la division de la suma entre el numeero de progresos
 }
