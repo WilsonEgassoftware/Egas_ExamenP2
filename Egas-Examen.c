@@ -22,8 +22,8 @@ float calcularPromedioGrupo(float notas[NUM_ALUMNOS][NUM_PROGRESOS], int progres
 }
   // Iterar a través de los progresos para sumar las notas
 int encontrarMejorAlumno(float notas[NUM_ALUMNOS][NUM_PROGRESOS]) {
-    int mejorAlumno = 0;
-    float mejorPromedio = calcularPromedioAlumno(notas[0]);
+    int mejorAlumno = 0;//declaramos al valor entero para saber solo con el numero de los 23 estudiantes 
+    float mejorPromedio = calcularPromedioAlumno(notas[0]);//llamamos a la función del resultado
 
     for (int i = 1; i < NUM_ALUMNOS; i++) {//se verifica la condicion de la cantidad de alumno y el numero de progresos
         float promedioActual = calcularPromedioAlumno(notas[i]);
