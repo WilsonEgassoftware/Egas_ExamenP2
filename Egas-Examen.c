@@ -30,7 +30,7 @@ int encontrarMejorAlumno(float notas[NUM_ALUMNOS][NUM_PROGRESOS]) {
 
     for (int i = 1; i < NUM_ALUMNOS; i++) {//se verifica la condicion de la cantidad de alumno y el numero de progresos
         float promedioActual = calcularPromedioAlumno(notas[i]);
-        if (promedioActual > mejorPromedio) {
+        if (promedioActual > mejorPromedio) { //verifación si el promedio es igual al mejor alumno 
             mejorPromedio = promedioActual;
             mejorAlumno = i;
         }
@@ -44,19 +44,19 @@ int main() {
     //Pedimos el ingreso de las notas y la cantidad de progresos
     printf("Ingrese las notas para cada alumno y progreso:\n");
     for (int i = 0; i < NUM_ALUMNOS; i++) {
-        printf("Alumno %d:\n", i + 1);
+        printf("Alumno %d:\n", i + 1);//verificamos que sean mayores al numero de alumnos
         for (int j = 0; j < NUM_PROGRESOS; j++) {
             printf("Progreso %d: ", j + 1);
-            scanf("%f", &notas[i][j]);
+            scanf("%f", &notas[i][j]);// lectura de los datos presentadoss para el promedio final
         }
     }
     // Realizamos el calcular promedio del grupo para cada progreso
     printf("\nPromedio del grupo para cada progreso:\n");
     for (int j = 0; j < NUM_PROGRESOS; j++) {
-        printf("Progreso %d: %.2f\n", j + 1, calcularPromedioGrupo(notas, j));
+        printf("Progreso %d: %.2f\n", j + 1, calcularPromedioGrupo(notas, j));//las notas seran verificadas si son mayores al numero de progresos
     }
     // Realizamos el calculo para saber el mejor alumno y su promedio
-    int mejorAlumno = encontrarMejorAlumno(notas);
+    int mejorAlumno = encontrarMejorAlumno(notas); //llamamos a la función para obtener los datos finales 
     printf("\nEl alumno con el mejor promedio es el Alumno %d\n", mejorAlumno + 1);
     return 0;
 }
